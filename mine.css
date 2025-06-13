@@ -1,0 +1,124 @@
+/* Дополнительные стили и переопределения */
+
+/* Улучшенные кнопки */
+.btn {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Анимации */
+.product {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Дополнительные стили для форм */
+input {
+    transition: box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0077cc;
+}
+
+/* Специальные стили для цен */
+.price {
+    position: relative;
+    display: inline-block;
+}
+
+.price:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0077cc;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.product:hover .price:after {
+    transform: scaleX(1);
+}
+
+/* Стили для иконок преимуществ */
+.advantage .icon {
+    width: 60px;
+    height: 60px;
+    background-color: #0077cc;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+/* Стили для хлебных крошек (если добавятся) */
+.breadcrumbs {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+/* Дополнительные медиа-запросы */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+    }
+}
+
+/* Стили для модального окна (если добавится) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
